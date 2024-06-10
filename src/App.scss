@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color-gradient: background: linear-gradient(0.25turn, #010c10, #841e1e, #000000);
+  --background-color-black: black;
+  --color-title-white: white;
+  --color-text-white: white;
+}
+
+@font-face {
+  font-family: mainfont;
+  src: url('./assets/fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: paragraph;
+  src: url('./assets/fonts/Poppins/Poppins-Regular.ttf');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: mainfont;
+  font-size: 22px;
+}
+
+p {
+  font-family: paragraph;
+}
+li {
+  font-family: paragraph;
+}
+span {
+  font-family: paragraph;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+.light-theme {
+  background-color: white;
+  color: black;
+  transition:
+    background-color 1s,
+    color 0.3s;
+}
+.punkt {
+  background: rgb(0, 0, 0);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.dark-theme {
+  background: linear-gradient(0.25turn, #010c10, #841e1e, #000000);
+  color: white;
+  transition:
+    background 1s,
+    color 0.3s;
+  .navbarmobilesection {
+    background: black;
+  }
+  .date_duration_genre,
+   .frame_text_info{
+    .punkt {
+    background-color: rgb(255, 255, 255);
+    }
+  }
+}
+.bookmark {
+  cursor: pointer;
+}

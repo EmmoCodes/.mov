@@ -1,0 +1,76 @@
+@font-face {
+  font-family: headline2;
+  src: url('../../../assets/fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+.get_started {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.get_started_img {
+  position: relative;
+  display: inline-block;
+}
+
+.get_started_img img {
+  position: absolute;
+  min-width: 250px;
+  min-height: 550px;
+}
+
+.img_background {
+  min-height: 60vh;
+  background: linear-gradient(to bottom right, #fc2121, #ff6b6b);
+  overflow: hidden;
+}
+
+.get_started_img img:first-child {
+  left: -110px;
+  top: 54px;
+  z-index: 1;
+}
+
+.get_started_img img:last-child {
+  right: -108px;
+  top: 10px;
+}
+
+.get_started_text {
+  h1 {
+    padding-top: 50px;
+    padding-inline: 40px;
+    padding-bottom: 24px;
+    font-size: 28px;
+    font-family: headline2;
+  }
+
+  p {
+    padding-inline: 36px;
+    padding-bottom: 40px;
+  }
+
+  button {
+    padding-inline: 50px;
+    padding-block: 16px;
+    background: linear-gradient(to right, #ff6b6b, #fc2121);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 64px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    min-width: 50%;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 391px) {
+  .get_started_text {
+    button {
+      min-width: 25%;
+    }
+  }
+}

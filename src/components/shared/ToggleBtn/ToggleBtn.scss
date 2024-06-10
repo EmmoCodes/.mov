@@ -1,0 +1,70 @@
+.toggle-button-container {
+  position: absolute;
+  top: 1.5%;
+  right: 20px;
+  transition:
+    right 0.3s,
+    background-color 0.3s;
+}
+
+.button.r {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: #000000;
+  border: 1.5px solid rgba(74, 74, 74, 0.064);
+  transition: background-color 0.3s;
+}
+
+.button.r .checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.button.r .knobs {
+  position: absolute;
+  top: 0px;
+  left: 2.3px;
+  width: 26px;
+  height: 26px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+
+.button.r .layer {
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  width: 31px;
+  height: 31px;
+  background: linear-gradient(0.25turn, #f80000f9, #841e1e, #ff0505);
+  border-radius: 50%;
+  transition: left 0.3s;
+}
+
+// .toggle-button-container.checked {
+//   right: calc(20px - 30px);
+// }
+
+.button.r.checked {
+  background-color: rgb(255, 255, 255);
+}
+
+.button.r.checked .knobs {
+  left: 29px;
+}
+
+.button.r.checked .layer {
+  left: 29px;
+}
+@media screen and (min-width: 391px) {
+  .toggle-button-container {
+    top: 10%;
+  }
+}

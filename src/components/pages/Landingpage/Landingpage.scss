@@ -1,0 +1,36 @@
+.pulsate {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.landingpagesection {
+  background: linear-gradient(to bottom right, #fc2121, #ff6b6b);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+  font-family: mainfont;
+  h2 {
+    animation-name: heartbeat;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  img {
+    min-width: 200px;
+  }
+}
+// .logo {
+//   background: center/ contain no-repeat url('../../../assets/img/njetflix.png');
+// }
