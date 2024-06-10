@@ -8,25 +8,25 @@ import demonslayer from '../../../assets/img/demonslayer.png'
 
 function ProfilePage() {
   const [showSettings, setShowSettings] = useState(false)
-
+  
   return (
     <section className="profile_section">
       <div className="profile_background">
         <img className="profile_img" src={profileimg} alt="" />
       </div>
       <div className="user_data">
-        <h2>Helmut Rakete</h2>
-        <h3>Los Angeles</h3>
+        <p>Helmut Rakete</p>
+        <p>Los Angeles</p>
       </div>
       <div className="account_stats">
         <div>
-          <h4>Watchtime</h4>
-          <p>61,2hrs</p>
+          <p>Watchtime</p>
+          <p>61.2 hrs</p>
         </div>
         <div></div>
         <div>
-          <h4>Abo Level</h4>
-          <p>Level 2 / 3</p>
+          <p>Saved Movies</p>
+          <p>13</p>
         </div>
       </div>
       <img
@@ -38,16 +38,13 @@ function ProfilePage() {
         alt=""
       />
       <ul className={showSettings ? 'profile_settings' : 'hide'}>
-        <li>change profile settings</li>
-        <li>change privacy settings</li>
-        <li>see abo details</li>
-        <li>change Abo plan</li>
-        <li>application settings</li>
-        <li>add payment method</li>
-        <li>cancel membership</li>
+        <li>Change profile settings</li>
+        <li>Change privacy settings</li>
+        <li>Application settings</li>
+        <li>Logout</li>
       </ul>
       <div className="list_section_headline">
-        <h4>Your Lists</h4>
+        <p>Your Lists</p>
       </div>
       <section className="list_section">
         <img className="anime" src={anime} alt="" />

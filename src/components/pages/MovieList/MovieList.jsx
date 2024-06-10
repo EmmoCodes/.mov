@@ -13,13 +13,13 @@ import LoadingAnime from '../../shared/LoadingAnime/LoadingAnime.jsx'
 function MovieList() {
   const { movieData, setMovieData } = useContext(MovieContext)
   const [loading, setLoading] = useState(false)
-
+  
   const { genreValue } = useContext(FilterContext)
   const { inputSearch, handleSearch } = useContext(InputContext)
-
+  
   useEffect(() => {
     setLoading(true)
-
+    
     getAllMovies(
       ` https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${genreValue}&api_key=${apiKey}`,
       setMovieData,
@@ -31,14 +31,14 @@ function MovieList() {
       }
     }, 300)
     clearTimeout(searchTimeout)
-
+    
     setLoading(false)
   }, [genreValue])
-
+  
   if (loading === true) {
-    return <LoadingAnime/>
+    return <LoadingAnime />
   }
-
+  
   const sortAscending = () => {
     const sortedData = [...movieData].sort((a, b) => {
       if (a.title < b.title) {
@@ -51,7 +51,7 @@ function MovieList() {
     })
     setMovieData(sortedData)
   }
-
+  
   const sortDescending = () => {
     const sortedData = [...movieData].sort((a, b) => {
       if (a.title > b.title) {
@@ -64,13 +64,13 @@ function MovieList() {
     })
     setMovieData(sortedData)
   }
-
+  
   return (
     <>
       <section className="movie_wrapper">
         <section className="desktop_bar_wrapper">
           <SearchBar />
-          <article className="Sort_button_wrapper">
+          <article className="sort_button_wrapper">
             <button type="button" className="sort_button" onClick={sortAscending}>
               Sort: A-Z
             </button>
@@ -84,7 +84,7 @@ function MovieList() {
             <MovieItem key={movie.id} movie={movie} id={movie.id} />
           ))}
         </article>
-
+        
         <div className="scroll_to_topbutton" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img src={button} alt="button icon" />
         </div>

@@ -6,9 +6,7 @@ import { FavoritesContext } from '../../utils/Contexts/FavoritesContext.jsx'
 
 function FavItem({ movie }) {
   const { favorites, setFavorites } = useContext(FavoritesContext)
-
-  console.log(favorites)
-
+  
   return (
     <div className="movie_frame">
       <Link to={`/details/${movie.id}`}>

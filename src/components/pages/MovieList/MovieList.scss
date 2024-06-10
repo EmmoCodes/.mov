@@ -28,17 +28,19 @@
     scale: -0.8;
   }
 
-  .Sort_button_wrapper {
+  .sort_button_wrapper {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 10px;
+    margin-top: 1.22rem;
+
 
     .sort_button {
+      color: white;
       background: linear-gradient(to right, #ff6b6b, #fc2121);
+      padding-inline: 25px;
+      max-height: 2.27rem;
       border-radius: 10px;
       border: none;
-      padding: 10px 30px;
-      color: #fff;
     }
   }
 
@@ -126,16 +128,16 @@
 
     .desktop_bar_wrapper {
       display: flex;
-      position: relative;
 
-      .Sort_button_wrapper {
-        position: absolute;
-        top: 30px;
-        right: 419px;
-        justify-content: normal;
-        gap: 10px;
-        min-width: 200px;
+
+      .sort_button_wrapper {
+        display: flex;
+        gap: 1rem;
+
+        margin-top: 3.04rem;
+        margin-left: 1rem;
       }
+
     }
 
     .movie_frame {

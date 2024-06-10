@@ -4,54 +4,42 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans") format("woff2"),
+  url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+}
+
 :root {
-  --background-color-gradient: background: linear-gradient(0.25turn, #010c10, #841e1e, #000000);
+  --background-color-gradient: background linear-gradient(0.25turn, #010c10, #841e1e, #000000);
   --background-color-black: black;
   --color-title-white: white;
   --color-text-white: white;
 }
 
-@font-face {
-  font-family: mainfont;
-  src: url('./assets/fonts/Poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-  font-family: paragraph;
-  src: url('./assets/fonts/Poppins/Poppins-Regular.ttf');
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: mainfont;
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
   font-size: 22px;
-}
-
-p {
-  font-family: paragraph;
-}
-li {
-  font-family: paragraph;
-}
-span {
-  font-family: paragraph;
 }
 
 a,
 button {
   cursor: pointer;
 }
+
 .light-theme {
-  background-color: white;
+  background-color: rgba(253, 253, 253, 0.31);
   color: black;
-  transition:
-    background-color 1s,
-    color 0.3s;
+  transition: background-color 1s,
+  color 0.3s;
+
+  .profile_settings {
+    background-color: gainsboro;
+  }
 }
+
 .punkt {
   background: rgb(0, 0, 0);
   width: 5px;
@@ -60,21 +48,52 @@ button {
 }
 
 .dark-theme {
-  background: linear-gradient(0.25turn, #010c10, #841e1e, #000000);
+  background: linear-gradient(0.40turn, #010c10, #841e1e, #000000);
   color: white;
-  transition:
-    background 1s,
-    color 0.3s;
+  transition: background 1s,
+  color 0.3s;
+
+  .profile_settings {
+    background-color: black;
+  }
+
   .navbarmobilesection {
     background: black;
   }
+
   .date_duration_genre,
-   .frame_text_info{
+  .frame_text_info {
     .punkt {
-    background-color: rgb(255, 255, 255);
+      background-color: rgb(255, 255, 255);
     }
   }
 }
+
 .bookmark {
   cursor: pointer;
+}
+
+@mixin xsMobile {
+  @media (max-width: 527px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
 }

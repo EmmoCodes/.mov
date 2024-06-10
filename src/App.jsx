@@ -1,5 +1,5 @@
 import { Route, Routes, json, useLocation } from 'react-router-dom'
-import './App.scss'
+import './app.scss'
 import { useEffect, useState } from 'react'
 import Home from './components/pages/Home/Home'
 import MovieList from './components/pages/MovieList/MovieList'
@@ -27,40 +27,40 @@ function App() {
   const [genreActive, setGenreActive] = useState(false)
   const [inputSearch, setInputSearch] = useState('')
   const [movieData, setMovieData] = useState([])
-
+  
   const [darkTheme, setDarkTheme] = useState(() => {
     const storedTheme = localStorage.getItem('darkTheme')
     return storedTheme ? JSON.parse(storedTheme) : false
   })
-
+  
   const [favorites, setFavorites] = useState(() => {
     const localFavorites = JSON.parse(localStorage.getItem('favorites'))
     return localFavorites ? localFavorites : []
   })
-
+  
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites))
   }, [favorites])
-
+  
   useEffect(() => {
     localStorage.setItem('darkTheme', JSON.stringify(darkTheme))
   }, [darkTheme])
-
+  
   const showToggle = location.pathname === '/home'
-
+  
   const toggleTheme = () => {
     setDarkTheme(prevTheme => !prevTheme)
   }
-
+  
   const handleGenreSearch = event => {
     setGenreValue(event.target.value)
     setGenreActive(!genreActive)
   }
-
+  
   const handleInputSearch = event => {
     setInputSearch(event.target.value.toLowerCase())
   }
-
+  
   const handleSearch = event => {
     if (inputSearch === '') return
     getAllMovies(
@@ -69,7 +69,7 @@ function App() {
       'results',
     )
   }
-
+  
   return (
     <section className={`app_background ${darkTheme ? 'dark-theme' : 'light-theme'}`}>
       <FilterContext.Provider value={{ genreValue, handleGenreSearch, genreActive, setGenreActive }}>
@@ -93,7 +93,7 @@ function App() {
           </MovieContext.Provider>
         </InputContext.Provider>
       </FilterContext.Provider>
-
+      
       {location.pathname === '/' ||
       location.pathname === '/login' ||
       location.pathname === '/popular' ||
@@ -101,7 +101,7 @@ function App() {
       location.pathname === '/getstarted' ? null : (
         <NavbarMobile />
       )}
-
+      
       {showToggle &&
         location.pathname !== '/' &&
         location.pathname !== '/getstarted' &&

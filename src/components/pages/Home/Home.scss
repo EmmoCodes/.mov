@@ -1,3 +1,5 @@
+@import "../../../app";
+
 .aws_btn {
   --slider-height-percentage: 53%;
   --slider-transition-duration: 200ms;
@@ -23,6 +25,7 @@
   a {
     color: #fff;
   }
+
   max-width: 400px;
   margin-bottom: 8rem;
 
@@ -101,33 +104,14 @@
 }
 
 @media screen and (min-width: 391px) {
-  .searchbar_wrapper {
-    max-width: 360px;
-    display: flex;
-    align-items: center;
-    .genre_buttons {
-      margin-top: 10px;
-      margin-left: 50px;
-    }
-    .movie_list_buttoncontainer {
-      justify-content: normal;
-      min-width: 200px;
-      margin-left: 100px;
-    }
-    .lens {
-      top: 40px;
-    }
-    .search_bar input {
-      margin-top: 39px;
-      height: 30px;
-    }
-  }
+
   .trending {
     margin-top: 100px;
   }
   .slider_wrapper {
     display: none;
     max-width: 585px;
+
     div:nth-of-type(1) img {
       width: 100%;
     }
@@ -143,9 +127,11 @@
     width: 100%;
     overflow-x: hidden;
     margin-bottom: 20px;
+
     a {
       color: #fff;
     }
+
     h2 {
       position: absolute;
       font-size: 16px;
@@ -159,6 +145,7 @@
     display: flex;
     width: 300%;
     animation: scroll 30s linear infinite;
+
     &:hover {
       animation-play-state: paused;
     }

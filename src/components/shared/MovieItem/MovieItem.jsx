@@ -1,9 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import star from '../../../assets/img/polygon.svg'
 import bookmark from '../../../assets/img/bookmark.svg'
 import bookmarkred from '../../../assets/img/bookmarkred.svg'
-import punkt from '../../../assets/img/Ellipse.svg'
 import { apiKey } from '../../../data/api.js'
 import { getAllMovies } from '../../utils/fetches/movieFetch.js'
 import { FilterContext } from '../../utils/Contexts/FilterContext.jsx'
@@ -19,18 +17,18 @@ function MovieItem({ movie }) {
   const isFavorite = !!favorites.find(favorite => {
     return favorite.id === movie.id
   })
-
+  
   useEffect(() => {
     setLoading(true)
     getAllMovies(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`, setMovieDetails).then(() => {
       setLoading(false)
     })
   }, [genreValue])
-
+  
   if (loading === true) {
-    return  <LoadingAnime/>
+    return <LoadingAnime />
   }
-
+  
   return (
     <div className="movie_frame">
       <Link to={`/details/${movie.id}`}>
@@ -73,8 +71,8 @@ function MovieItem({ movie }) {
             {genreActive
               ? movieDetails.genres.find(genre => genre.id === Number(genreValue))?.name.substring(0, 9)
               : movieDetails.genres[0]
-              ? movieDetails.genres[0].name.substring(0, 9)
-              : 'n.A.'}
+                ? movieDetails.genres[0].name.substring(0, 9)
+                : 'n.A.'}
             <span className="punkt"></span>
           </p>
           <p>{movieDetails.runtime} m</p>
