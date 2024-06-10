@@ -1,6 +1,6 @@
 # Description
 
-Njetflix is a sleek and user-friendly movie application that empowers movie enthusiasts to explore, organize, and enjoy their favorite films. With an extensive library of movies at your fingertips, you can effortlessly browse, search, sort by genre, access detailed movie information, watch trailers, and curate your own personal list of favorite films.
+.mov is a sleek and user-friendly movie application that empowers movie enthusiasts to explore, organize, and enjoy their favorite films. With an extensive library of movies at your fingertips, you can effortlessly browse, search, sort by genre, access detailed movie information, watch trailers, and curate your own personal list of favorite films.
 
 ## Features
 
@@ -16,11 +16,11 @@ Browse Movies: Discover a vast collection of movies, spanning from the latest re
 
 ## Getting Started
 
-Ready to dive into the world of movies? Visit [Njetflix movie app](https://njetflix.netlify.app) and get started right away.
+Ready to dive into the world of movies? Visit [.mov movie app](https://njetflix.netlify.app) and get started right away.
 
 ## Compatibility
 
-Njetflix Movie App is designed to provide an optimal user experience on Macbook screens and iPhone 12 Pro screens.
+.mov Movie App is designed to provide an optimal user experience on Macbook screens and iPhone 12 Pro screens.
 
 ## Whats planned for 2.0?
 - Login
