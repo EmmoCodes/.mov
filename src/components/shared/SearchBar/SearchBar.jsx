@@ -89,7 +89,7 @@ function SearchBar() {
         ) : null}
         {location.pathname === '/home' ? (
           <>
-            <section className={searchFrame ? 'searched_movie_frame' : 'hide'}>
+            <section className={searchFrame && focused ? 'searched_movie_frame' : 'hide'}>
               {movieData.map(movie => (
                 <SearchModalItem key={movie.id} movie={movie} id={movie.id} />
               ))}

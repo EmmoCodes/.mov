@@ -17,7 +17,7 @@ function GetStarted() {
         <h1>Enjoy Your Movie Watch Everywhere</h1>
         <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
         <Link to="/login">
-          <button>Get Started</button>
+          <button className={'button_red'}>Get Started</button>
         </Link>
       </div>
     </section>

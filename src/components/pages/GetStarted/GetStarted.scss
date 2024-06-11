@@ -5,7 +5,8 @@
 
 .get_started {
   text-align: center;
-  min-height: 100vh;
+  overflow: hidden;
+  height: calc(100vh - 3px);
 }
 
 .get_started_img {
@@ -37,33 +38,18 @@
 }
 
 .get_started_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+
   h1 {
-    padding-top: 50px;
-    padding-inline: 40px;
-    padding-bottom: 24px;
-    font-size: 28px;
-    font-family: headline2;
+    font-size: 2rem;
   }
 
   p {
-    padding-inline: 36px;
-    padding-bottom: 40px;
-  }
-
-  button {
-    padding-inline: 50px;
-    padding-block: 16px;
-    background: linear-gradient(to right, #ff6b6b, #fc2121);
-    border-radius: 10px;
-    border: none;
-    color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 64px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px,
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    min-width: 50%;
-    font-size: 15px;
+    padding-inline: 1rem;
+    padding-bottom: 2rem;
   }
 }
 

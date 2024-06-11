@@ -35,34 +35,35 @@ function Home() {
           <div></div>
         </div>
         <section className="slider_wrapper">
-          <div className="trending">
-            <p>Trending Movies</p>
-            <Link to="/popular">
-              <span defaultValue="27">See All</span>
-            </Link>
-          </div>
-          <AwesomeSlider className="aws_btn">
-            {randomMovies.map(movie => (
-              <div key={movie.id}>
-                <Link to={`/details/${movie.id}`}>
-                  <div className="image_wrapper">
+          <div className={'slider_container'}>
+            <div className="trending">
+              <p>Trending Movies</p>
+              <Link to="/popular">
+                <span defaultValue="27">See All</span>
+              </Link>
+            </div>
+            <AwesomeSlider className="aws_btn">
+              {randomMovies.map(movie => (
+                <div key={movie.id}>
+                  <Link to={`/details/${movie.id}`}>
                     <img
+                      className="image"
                       src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                       alt="photos"
                       key={movie.backdrop_path}
                     />
-                  </div>
-                  <div className="rating_container">
-                    <h2>{movie.title.substring(0, 20)}</h2>
-                    <div>
-                      <img src={star} alt="" />
-                      <p>{movie.vote_average.toFixed(1)} / 10.0</p>
+                    <div className="rating_container">
+                      <h2>{movie.title.substring(0, 18)}</h2>
+                      <div>
+                        <img src={star} alt="" />
+                        <p>{movie.vote_average.toFixed(1)} / 10.0</p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </AwesomeSlider>
+                  </Link>
+                </div>
+              ))}
+            </AwesomeSlider>
+          </div>
         </section>
         <section className="animated_banner_container hidden_section">
           <div className="trending">
