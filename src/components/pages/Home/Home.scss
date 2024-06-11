@@ -29,7 +29,6 @@
   @include tablet {
     padding-inline: 3rem;
     justify-content: space-evenly;
-
     padding-block: 5rem;
   }
 
@@ -39,6 +38,9 @@
 
   @include mobile {
     padding-inline: 1rem;
+    padding-block: 2rem;
+    justify-content: start;
+    gap: 4rem;
     h1 {
       font-size: 1.5rem;
     }
