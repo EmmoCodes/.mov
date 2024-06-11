@@ -87,16 +87,16 @@ function SearchBar() {
             </NavLink>
           </div>
         ) : null}
+        {location.pathname === '/home' ? (
+          <>
+            <section className={searchFrame && focused ? 'searched_movie_frame' : 'hide'}>
+              {movieData.map(movie => (
+                <SearchModalItem key={movie.id} movie={movie} id={movie.id} />
+              ))}
+            </section>
+          </>
+        ) : null}
       </section>
-      {location.pathname === '/home' ? (
-        <>
-          <section className={searchFrame && focused ? 'searched_movie_frame' : 'hide'}>
-            {movieData.map(movie => (
-              <SearchModalItem key={movie.id} movie={movie} id={movie.id} />
-            ))}
-          </section>
-        </>
-      ) : null}
     </>
   )
 }

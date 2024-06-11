@@ -28,16 +28,20 @@
 
   @include tablet {
     padding-inline: 3rem;
-    justify-content: space-between;
-    padding-block: 5rem;
-  }
+    justify-content: space-evenly;
 
-  @include mobile {
-    padding-inline: 1rem;
+    padding-block: 5rem;
   }
 
   h1 {
     font-size: 2.5rem;
+  }
+
+  @include mobile {
+    padding-inline: 1rem;
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 }
 
