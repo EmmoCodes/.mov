@@ -20,7 +20,6 @@
   padding-top: 4rem;
   padding-inline: 1rem;
   padding-block: 3rem;
-  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,7 +38,7 @@
     padding-inline: 1rem;
     padding-block: 2rem;
     justify-content: start;
-    gap: 4rem;
+    gap: 2rem;
     h1 {
       font-size: 1.5rem;
     }
