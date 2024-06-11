@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import punkt from '../../../assets/img/Ellipse.svg'
 import '../../pages/MovieList/MovieList.scss'
 import { FavoritesContext } from '../../utils/Contexts/FavoritesContext.jsx'
 
 function FavItem({ movie }) {
   const { favorites, setFavorites } = useContext(FavoritesContext)
-  
+
   return (
     <div className="movie_frame">
       <Link to={`/details/${movie.id}`}>
@@ -25,7 +24,6 @@ function FavItem({ movie }) {
             )
           }}
           className="remove_fav">
-          {' '}
           remove from favorites
         </button>
       </div>

@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import './ProfilePage.scss'
 import profileimg from '../../../assets/img/profilepic.jpg'
-import settings from '../../../assets/img/settings.png'
+import settings from '../../../assets/img/settings.svg'
 import addlist from '../../../assets/img/addlist.png'
 import anime from '../../../assets/img/anime.jpg'
 import demonslayer from '../../../assets/img/demonslayer.png'
 
 function ProfilePage() {
   const [showSettings, setShowSettings] = useState(false)
-  
+
   return (
     <section className="profile_section">
       <div className="profile_background">
@@ -29,13 +29,11 @@ function ProfilePage() {
           <p>13</p>
         </div>
       </div>
-      <img
+      <div
         onClick={() => {
           setShowSettings(!showSettings)
         }}
         className="settings_icon"
-        src={settings}
-        alt=""
       />
       <ul className={showSettings ? 'profile_settings' : 'hide'}>
         <li>Change profile settings</li>
