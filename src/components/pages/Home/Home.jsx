@@ -53,7 +53,7 @@ function Home() {
                       key={movie.backdrop_path}
                     />
                     <div className="rating_container">
-                      <h2>{movie.title.substring(0, 18)}</h2>
+                      <h2>{movie.title.substring(0, 14)}</h2>
                       <div>
                         <img src={star} alt="" />
                         <p>{movie.vote_average.toFixed(1)} / 10.0</p>
