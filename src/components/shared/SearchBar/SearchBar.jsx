@@ -14,6 +14,9 @@ function SearchBar() {
   const { movieData } = useContext(MovieContext)
   const location = useLocation()
   const [searchFrame, setSearchFrame] = useState(false)
+  const [focused, setFocused] = React.useState(false)
+  const onFocus = () => setFocused(true)
+  const onBlur = () => setFocused(false)
 
   useEffect(() => {
     if (inputSearch === '') {
@@ -38,6 +41,8 @@ function SearchBar() {
           <div>
             <label htmlFor="search"></label>
             <input
+              onFocus={onFocus}
+              onBlur={onBlur}
               type="text"
               name="search"
               id="search"
@@ -53,21 +58,21 @@ function SearchBar() {
             <NavLink
               to="/list"
               className={({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'active' : '')}>
-              <button type="button" value="28" onClick={handleGenreSearch}>
+              <button className="button_red" type="button" value="28" onClick={handleGenreSearch}>
                 Action
               </button>
             </NavLink>
             <NavLink
               to="/list"
               className={({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'active' : '')}>
-              <button value="35" onClick={handleGenreSearch}>
+              <button className="button_red" value="35" onClick={handleGenreSearch}>
                 Comedy
               </button>
             </NavLink>
             <NavLink
               to="/list"
               className={({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'active' : '')}>
-              <button value="27" onClick={handleGenreSearch}>
+              <button className="button_red" value="27" onClick={handleGenreSearch}>
                 Horror
               </button>
             </NavLink>
@@ -76,7 +81,7 @@ function SearchBar() {
         {location.pathname === '/home' || location.pathname === '/popular' ? (
           <div className="movie_list_buttoncontainer">
             <NavLink to="/list">
-              <button type="button" className="movie_list_button">
+              <button type="button" className="button_red">
                 Browse all
               </button>
             </NavLink>
@@ -85,7 +90,7 @@ function SearchBar() {
       </section>
       {location.pathname === '/home' ? (
         <>
-          <section className={searchFrame ? 'searched_movie_frame' : 'hide'}>
+          <section className={searchFrame && focused ? 'searched_movie_frame' : 'hide'}>
             {movieData.map(movie => (
               <SearchModalItem key={movie.id} movie={movie} id={movie.id} />
             ))}

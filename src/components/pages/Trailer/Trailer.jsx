@@ -5,7 +5,7 @@ import { apiKey } from '../../../data/api.js'
 import './Trailer.scss'
 import trailer from '../../../assets/img/watchtrailer.png'
 import notrailer from '../../../assets/img/notrailer.png'
-import button from '../../../assets/img/backbuttondetails.svg'
+import button from '../../../assets/img/backButtonWhite.svg'
 import cinema from '../../../assets/img/cinema.jpg'
 
 function Trailer() {
@@ -30,11 +30,6 @@ function Trailer() {
     }
   })
 
-  // if (!trailerData.id) {
-  //   return <p>Is Loading...</p>
-  // }
-  console.log(trailerData)
-
   return (
     <>
       <div className="backbutton">
@@ -48,8 +43,7 @@ function Trailer() {
               title="Movie Trailer"
               src={`https://www.youtube.com/embed/${trailerKey}`}
               allowFullScreen
-              frameBorder="0"
-              ></iframe>
+              frameBorder="0"></iframe>
           ) : (
             <img className="no_trailer" src={notrailer} alt="" />
           )}

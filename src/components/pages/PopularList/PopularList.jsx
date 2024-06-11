@@ -6,7 +6,7 @@ import { getAllMovies } from '../../utils/fetches/movieFetch.js'
 import { apiKey } from '../../../data/api.js'
 import SearchBar from '../../shared/SearchBar/SearchBar.jsx'
 import MovieItem from '../../shared/MovieItem/MovieItem.jsx'
-import button from '../../../assets/img/backbuttondetails.svg'
+import button from '../../../assets/img/backButtonWhite.svg'
 import LoadingAnime from '../../shared/LoadingAnime/LoadingAnime.jsx'
 import NavbarMobile from '../../shared/NavbarMobile/NavbarMobile.jsx'
 

@@ -29,67 +29,77 @@ function Home() {
   return (
     <>
       <section className="home">
-        <h1>Welcome, Helmut</h1>
-        <SearchBar />
         <div>
+          <h1>Welcome, Helmut</h1>
+          <SearchBar />
+          <div></div>
+        </div>
+        <section className="slider_wrapper">
           <div className="trending">
-            <h2>Trending Movies</h2>
+            <p>Trending Movies</p>
             <Link to="/popular">
               <span defaultValue="27">See All</span>
             </Link>
           </div>
-
-          <article className="slider_wrapper">
-            <AwesomeSlider className="aws_btn">
-              {randomMovies.map(movie => (
-                <div key={movie.id}>
-                  <Link to={`/details/${movie.id}`}>
+          <AwesomeSlider className="aws_btn">
+            {randomMovies.map(movie => (
+              <div key={movie.id}>
+                <Link to={`/details/${movie.id}`}>
+                  <div className="image_wrapper">
                     <img
                       src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                       alt="photos"
                       key={movie.backdrop_path}
                     />
-                    <h2>{movie.title}</h2>
-                    <div className="rating_container">
+                  </div>
+                  <div className="rating_container">
+                    <h2>{movie.title.substring(0, 20)}</h2>
+                    <div>
                       <img src={star} alt="" />
-                      <p>{movie.vote_average} / 10.0</p>
+                      <p>{movie.vote_average.toFixed(1)} / 10.0</p>
                     </div>
-                  </Link>
-                </div>
-              ))}
-            </AwesomeSlider>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </AwesomeSlider>
+        </section>
+        <section className="animated_banner_container hidden_section">
+          <div className="trending">
+            <p>Trending Movies</p>
+            <Link to="/popular">
+              <span defaultValue="27">See All</span>
+            </Link>
+          </div>
+          <article className="animated_banner">
+            {randomMovies.map(movie => (
+              <div key={movie.id} className="image_container">
+                <Link to={`/details/${movie.id}`}>
+                  <img
+                    className="animated_image"
+                    src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                    alt="photos"
+                    key={movie.backdrop_path}
+                  />
+                  <h2>{movie.title}</h2>
+                </Link>
+              </div>
+            ))}
+            {randomMovies.map(movie => (
+              <div key={movie.id} className="image_container">
+                <Link to={`/details/${movie.id}`}>
+                  <img
+                    className="animated_image"
+                    src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                    alt="photos"
+                    key={movie.backdrop_path}
+                  />
+                  <h2>{movie.title}</h2>
+                </Link>
+              </div>
+            ))}
           </article>
-          <section className="animated_banner_container hidden_section">
-            <article className="animated_banner">
-              {randomMovies.map(movie => (
-                <div key={movie.id} className="image_container">
-                  <Link to={`/details/${movie.id}`}>
-                    <img
-                      className="animated_image"
-                      src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-                      alt="photos"
-                      key={movie.backdrop_path}
-                    />
-                    <h2>{movie.title}</h2>
-                  </Link>
-                </div>
-              ))}
-              {randomMovies.map(movie => (
-                <div key={movie.id} className="image_container">
-                  <Link to={`/details/${movie.id}`}>
-                    <img
-                      className="animated_image"
-                      src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-                      alt="photos"
-                      key={movie.backdrop_path}
-                    />
-                    <h2>{movie.title}</h2>
-                  </Link>
-                </div>
-              ))}
-            </article>
-          </section>
-        </div>
+        </section>
       </section>
     </>
   )

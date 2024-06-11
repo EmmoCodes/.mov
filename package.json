@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@rcaferati/wac": "^1.0.0",
+    "@theme-toggles/react": "^4.1.0",
     "animate.css": "^4.1.1",
     "carousel": "^0.0.3",
     "react": "^18.2.0",
