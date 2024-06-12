@@ -88,14 +88,14 @@ const MovieDetails = () => {
             </div>
           </div>
         </section>
+        <div className="buttonbox">
+          <Link to={`/trailer/${movieDetail.id}`}>
+            <button type="button" className="button_red">
+              Watch Trailer
+            </button>
+          </Link>
+        </div>
       </section>
-      <div className="buttonbox">
-        <Link to={`/trailer/${movieDetail.id}`}>
-          <button type="button" className="watch_movie_button">
-            Watch Trailer
-          </button>
-        </Link>
-      </div>
     </div>
   )
 }

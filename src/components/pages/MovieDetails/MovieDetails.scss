@@ -1,12 +1,24 @@
+@import 'src/app.scss';
+
 .details_wrapper {
   display: flex;
-  min-height: 95vh;
+  height: 95vh;
   flex-direction: row;
   justify-content: start;
   padding-left: 8rem;
   gap: 8rem;
   font-weight: 400;
   overflow-x: hidden;
+
+  @include tablet {
+    gap: 2rem;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 0;
+  }
 
   .backbutton {
     position: absolute;
@@ -21,22 +33,31 @@
   .banner_section {
     min-height: 95vh;
     display: flex;
+    position: relative;
 
     .main_img {
       min-height: 400px;
       max-width: 400px;
       object-fit: cover;
       mask-image: linear-gradient(to top, transparent, black 45%);
+
+      @include mobile {
+        width: initial;
+      }
     }
 
     .relativ_headline {
       position: absolute;
       bottom: 10%;
-      left: 9.25rem;
+      left: 2rem;
       transform: translate(-0%, -50%);
       display: flex;
       flex-direction: column;
       text-align: center;
+
+      @include mobile {
+        left: 5rem;
+      }
 
       p {
         font-size: 1rem;
@@ -66,18 +87,27 @@
     }
   }
   .overview_wrapper {
-    padding-top: 150px;
+    margin-top: 9rem;
     margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
     max-width: 40rem;
+    height: 18rem;
+    padding-right: 1rem;
+
+    @include tablet {
+      margin-top: 3rem;
+      height: 20rem;
+    }
 
     h2 {
       font-size: 2rem;
+
+      @include mobile {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
     }
 
     .overview_text {
-      min-width: 35rem;
       font-size: 1.2rem;
     }
 
@@ -92,41 +122,37 @@
   .details_box {
     display: flex;
     gap: 4rem;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
     h3 {
       font-size: 2rem;
       font-weight: 400;
+
+      @include mobile {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
     }
+
     p {
       font-size: 1.2rem;
-
       padding-left: 0.5rem;
-    }
 
-    .genre_box {
+      @include mobile {
+        font-size: 1rem;
+      }
     }
   }
 
   .buttonbox {
-    position: absolute;
-    bottom: 5rem;
-    left: 41rem;
+    margin-top: 8rem;
 
-    .watch_movie_button {
-      margin-bottom: 50px;
-      padding-inline: 50px;
-      padding-block: 16px;
-      background: linear-gradient(to right, #ff6b6b, #fc2121);
-      border-radius: 10px;
-      border: none;
-      color: #fff;
-      box-shadow:
-        rgba(0, 0, 0, 0.25) 0px 54px 64px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px,
-        rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px,
-        rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      min-width: 50%;
-      font-size: 15px;
+    @include tablet {
+      margin-top: 1rem;
     }
   }
 }
