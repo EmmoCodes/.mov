@@ -20,7 +20,9 @@ function LoginForm() {
       <div className="login_pw">
         <span>
           <Link to="/home">
-            <button type="button">Login</button>
+            <button className="button_red" type="button">
+              Login
+            </button>
           </Link>
         </span>
         <span>
@@ -35,7 +37,9 @@ function LoginForm() {
           <img src={twitter} alt="" className="icon" />
         </div>
         <Link to="/register">
-          <button type="button">Sign Up</button>
+          <button className="button_red" type="button">
+            Sign Up
+          </button>
         </Link>
       </div>
     </section>

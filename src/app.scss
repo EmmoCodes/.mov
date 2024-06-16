@@ -68,6 +68,13 @@ button {
     background: linear-gradient(to right, #ff6b6b, #fc2121);
   }
 
+  .landingpagesection,
+  .login_form,
+  .register_page {
+
+    background: linear-gradient(to right, #ff6b6b, #fc2121);
+  }
+
   .searched_movie_frame {
     background: linear-gradient(to right, #ff6b6b, #fc2121);
   }
@@ -105,6 +112,11 @@ button {
   transition:
     background 1s,
     color 0.3s;
+
+  .landingpagesection,
+  .login_form {
+    background: linear- ↪ gradient(to bottom ↪ right, #fc2121, #ff6b6b) ↪;
+  }
 
   .button_red {
     background: linear-gradient(to right, #232323, #333232);
@@ -160,6 +172,7 @@ a {
     fill: black;
     stroke: black;
   }
+
   to {
     stroke: white;
     fill: white;
@@ -171,6 +184,7 @@ a {
     fill: white;
     stroke: white;
   }
+
   to {
     stroke: black;
     fill: black;

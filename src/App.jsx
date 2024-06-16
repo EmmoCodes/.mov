@@ -95,10 +95,10 @@ function App() {
       </FilterContext.Provider>
 
       {location.pathname === '/' ||
-      location.pathname === '/login' ||
-      location.pathname === '/popular' ||
-      location.pathname === '/register' ||
-      location.pathname === '/getstarted' ? null : (
+        location.pathname === '/login' ||
+        location.pathname === '/popular' ||
+        location.pathname === '/register' ||
+        location.pathname === '/getstarted' ? null : (
         <NavbarMobile />
       )}
 

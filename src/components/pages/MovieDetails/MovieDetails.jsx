@@ -13,7 +13,6 @@ const MovieDetails = () => {
   const [movieDetail, setMovieDetail] = useState({})
   const params = useParams()
   const navigate = useNavigate()
-
   const [backButton, setBackButton] = useState('')
 
   useEffect(() => {
@@ -44,6 +43,7 @@ const MovieDetails = () => {
         <img src={`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`} alt="Photo" className="main_img" />
         <div className="relativ_headline">
           <p>Movie Details</p>
+
           <h1>{movieDetail.title.substring(0, 22)}</h1>
           <div className="date_duration_genre">
             <img src={start} alt="star Icon" />

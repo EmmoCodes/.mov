@@ -22,7 +22,9 @@ function RegisterForm() {
       </form>
       <div className="register_buttons">
         <Link to="/home">
-          <button type="button">Create</button>
+          <button className="button_red" type="button">
+            Create
+          </button>
         </Link>
       </div>
     </section>
