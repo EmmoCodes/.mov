@@ -1,10 +1,10 @@
 # Description
 
-.mov is a sleek and user-friendly movie application that empowers movie enthusiasts to explore, organize, and enjoy their favorite films. With an extensive library of movies at your fingertips, you can effortlessly browse, search, sort by genre, access detailed movie information, watch trailers, and curate your own personal list of favorite films.
+.mov is a sleek and user-friendly movie application that empowers movie enthusiasts to explore and organize their favorite films. With an extensive library of movies and their details at your fingertips, you can effortlessly browse, search, sort by genre, access detailed movie information, watch trailers, and curate your own personal list of favorite films.
 
 ## Features
 
-Browse Movies: Discover a vast collection of movies, spanning from the latest releases to timeless classics. Whether you're in the mood for action, comedy, drama, or any other genre, Njetflix has you covered.
+Browse Movies: Discover a vast collection of movies, spanning from the latest releases to timeless classics. Whether you're in the mood for action, comedy, drama, or any other genre, .mov has you covered.
 
 ## Genre Sorting: Easily filter movies by genre to swiftly find films that align with your cinematic preferences.
 
@@ -20,7 +20,7 @@ Ready to dive into the world of movies? Visit [.mov movie app](https://njetflix.
 
 ## Compatibility
 
-.mov Movie App is designed to provide an optimal user experience on Macbook screens and iPhone 12 Pro screens.
+.mov Movie App is designed to provide an optimal user experience.
 
 ## Whats planned for 2.0?
 - Login
