@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../LoginForm/LoginForm.scss'
 import { Link } from 'react-router-dom'
 import google from '../../../assets/img/google.svg'
 import facebook from '../../../assets/img/facebook.svg'
 import twitter from '../../../assets/img/twitter.svg'
-import logo from '../../../assets/img/njetflix.png'
+import movWhite from '../../../assets/img/movWhite.png'
+import movBlack from '../../../assets/img/movBlack.png'
 
 function LoginForm() {
+  const [logo, setLogo] = useState('')
+
+  useEffect(() => {
+    const themeValue = localStorage.getItem('darkTheme')
+    if (themeValue) {
+      setLogo(movWhite)
+    } else {
+      setLogo(movBlack)
+    }
+  }, [])
+
   return (
     <section className="login_form">
       <img src={logo} alt="" className="logo" />

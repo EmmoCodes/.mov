@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './RegisterForm.scss'
 import { Link } from 'react-router-dom'
-import logo from '../../../assets/img/njetflix.png'
+import twitter from '../../../assets/img/twitter.svg'
+import movWhite from '../../../assets/img/movWhite.png'
+import movBlack from '../../../assets/img/movBlack.png'
 
 function RegisterForm() {
+  const [logo, setLogo] = useState('')
+
+  useEffect(() => {
+    const themeValue = localStorage.getItem('darkTheme')
+    if (themeValue) {
+      setLogo(movWhite)
+    } else {
+      setLogo(movBlack)
+    }
+  }, [])
   return (
     <section className="register_page">
       <img src={logo} alt="" className="logo" />

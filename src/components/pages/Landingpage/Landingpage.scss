@@ -1,5 +1,6 @@
 .pulsate {
   animation: pulse 1.5s ease-in-out infinite;
+
 }
 
 @keyframes pulse {
@@ -33,10 +34,6 @@
   }
 
   img {
-    min-width: 200px;
+    width: 15rem;
   }
 }
-
-// .logo {
-//   background: center/ contain no-repeat url('../../../assets/img/njetflix.png');
-// }
