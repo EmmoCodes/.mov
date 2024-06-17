@@ -1,3 +1,5 @@
+@import '../../../app.scss';
+
 .movie_wrapper {
   padding: 10px 20px;
   display: flex;
@@ -28,10 +30,6 @@
     cursor: pointer;
   }
 
-  .sort_button_wrapper {
-    display: flex;
-    gap: 1rem;
-  }
 
   .movie_frame {
     display: flex;
@@ -103,7 +101,6 @@
   }
 }
 
-@media screen and (min-width: 391px) {
   .item_wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -116,9 +113,26 @@
 
     .desktop_bar_wrapper {
       display: flex;
-      max-height: 37px;
       gap: 1rem;
-      margin-top: 1.5rem;
+
+      .sort_buttons {
+        max-height: 2.5rem;
+        display: flex;
+        gap: 1rem;
+        margin-top: 2.7rem;
+
+        @include tablet {
+          margin-top: 6rem;
+          align-content: center;
+          margin-right:25rem;
+          display: none;  
+
+        }
+
+        @include mobile {
+        }
+
+      }
     }
 
     .movie_frame {
@@ -128,4 +142,4 @@
       margin-top: 4rem;
     }
   }
-}
+

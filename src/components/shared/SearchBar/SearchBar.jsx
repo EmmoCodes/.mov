@@ -49,7 +49,7 @@ function SearchBar() {
           />
           <div onClick={() => setSearchFrame(false)} className="close_div"></div>
         </div>
-        <div className="invis_div"></div>
+        {location.pathname === '/home' ? <div className="invis_div"></div> : null}
       </div>
       {location.pathname !== '/home' && location.pathname !== '/popular' ? (
         <div className="genre_buttons">

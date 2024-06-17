@@ -67,15 +67,17 @@ function MovieList() {
   }
 
   return (
-    <section className="movie_wrapper">
+    <section className="movie_wrapper all_movies">
       <section className="desktop_bar_wrapper">
         <SearchBar />
-        <button type="button" className="button_red" onClick={sortAscending}>
-          A - Z
-        </button>
-        <button type="button" className="button_red" onClick={sortDescending}>
-          Z - A
-        </button>
+        <div className="sort_buttons">
+          <button type="button" className="button_red" onClick={sortAscending}>
+            A - Z
+          </button>
+          <button type="button" className="button_red" onClick={sortDescending}>
+            Z - A
+          </button>
+        </div>
       </section>
       <article className="item_wrapper">
         {movieData.map(movie => (
