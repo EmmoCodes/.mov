@@ -9,6 +9,16 @@
   min-height: 95vh;
   padding-bottom: 10rem;
 
+  .backbutton {
+    position: absolute;
+    left: 1.3rem;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 10;
+  }
   .remove_fav {
     border-radius: 10px;
     border: none;
@@ -125,11 +135,12 @@
           margin-top: 6rem;
           align-content: center;
           margin-right:25rem;
-          display: none;  
+          
 
         }
 
         @include mobile {
+        display:none;
         }
 
       }

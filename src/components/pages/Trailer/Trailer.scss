@@ -9,6 +9,17 @@
   padding-bottom: 6.25%;
   overflow: hidden;
 
+  .backbutton {
+position: absolute;
+    left: 2rem;
+    top: 6rem;
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    cursor: pointer;
+    border:   #000;
+    background: url('/src/assets/img/backButtonWhite.svg') no-repeat;
+  }
   // div {
   //   // margin-block: 15%;
   //   position: absolute;

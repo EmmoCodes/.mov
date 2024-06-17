@@ -84,7 +84,8 @@ button {
   }
 
   .backbutton {
-    background: url('/src/assets/img/backButtonBlack.svg') no-repeat;
+    background: url('/src/assets/img/backButtonBlack.svg') no-repeat; 
+    z-index: 999;
   }
 
   .theme-toggle {
@@ -141,6 +142,7 @@ button {
 
   .backbutton {
     background: url('/src/assets/img/backButtonWhite.svg') no-repeat;
+    z-index: 999;
   }
 
   .navbarmobilesection {

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import './popularList.scss'
 import { MovieContext } from '../../utils/Contexts/MovieContext.jsx'
 import { FilterContext } from '../../utils/Contexts/FilterContext.jsx'
 import { InputContext } from '../../utils/Contexts/InputContext.jsx'
@@ -9,12 +10,14 @@ import MovieItem from '../../shared/MovieItem/MovieItem.jsx'
 import button from '../../../assets/img/backButtonWhite.svg'
 import LoadingAnime from '../../shared/LoadingAnime/LoadingAnime.jsx'
 import NavbarMobile from '../../shared/NavbarMobile/NavbarMobile.jsx'
+import { useNavigate } from 'react-router-dom'
 
 function PopularList() {
   const { movieData, setMovieData } = useContext(MovieContext)
   const [loading, setLoading] = useState(false)
   const { genreValue } = useContext(FilterContext)
   const { inputSearch, handleSearch } = useContext(InputContext)
+  const navigate = useNavigate()
 
   useEffect(() => {
     setLoading(true)
@@ -40,6 +43,7 @@ function PopularList() {
   return (
     <>
       <section className="movie_wrapper">
+        <div onClick={() => navigate(-1)} className="backbutton"></div>
         <SearchBar />
         <article className="item_wrapper">
           {movieData.map(movie => (

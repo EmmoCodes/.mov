@@ -10,6 +10,7 @@ import { MovieContext } from '../../utils/Contexts/MovieContext.jsx'
 import button from '../../../assets/img/backButtonWhite.svg'
 import LoadingAnime from '../../shared/LoadingAnime/LoadingAnime.jsx'
 import NavbarMobile from '../../shared/NavbarMobile/NavbarMobile.jsx'
+import { useNavigate } from 'react-router-dom'
 
 function MovieList() {
   const { movieData, setMovieData } = useContext(MovieContext)
@@ -17,6 +18,7 @@ function MovieList() {
 
   const { genreValue } = useContext(FilterContext)
   const { inputSearch, handleSearch } = useContext(InputContext)
+  const navigate = useNavigate()
 
   useEffect(() => {
     setLoading(true)
@@ -68,6 +70,7 @@ function MovieList() {
 
   return (
     <section className="movie_wrapper all_movies">
+      <div onClick={() => navigate(-1)} className="backbutton"></div>
       <section className="desktop_bar_wrapper">
         <SearchBar />
         <div className="sort_buttons">

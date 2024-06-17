@@ -6,7 +6,6 @@ import './Trailer.scss'
 import trailer from '../../../assets/img/watchtrailer.png'
 import notrailer from '../../../assets/img/notrailer.png'
 import button from '../../../assets/img/backButtonWhite.svg'
-import cinema from '../../../assets/img/cinema.jpg'
 
 function Trailer() {
   const [trailerData, setTrailerData] = useState([])
@@ -32,10 +31,8 @@ function Trailer() {
 
   return (
     <>
-      <div className="backbutton">
-        <img src={button} alt="" onClick={() => navigate(-1)} />
-      </div>
       <section className="trailer_section">
+        <div onClick={() => navigate(-1)} className="backbutton"></div>
         <img className="watch_trailer" src={trailer} alt="" />
         <div className="trailer_box">
           {trailerKey ? (
