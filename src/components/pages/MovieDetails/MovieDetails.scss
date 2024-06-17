@@ -17,10 +17,10 @@
   @include mobile {
     flex-direction: column;
     padding-left: 0;
-    max-width: 60vw;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10rem;
   }
 
   .backbutton {
@@ -31,6 +31,7 @@
     height: 2rem;
     background-size: contain;
     cursor: pointer;
+    z-index: 10;
   }
 
   .banner_section {
@@ -55,14 +56,17 @@
       position: absolute;
       bottom: 10%;
       left: 2rem;
-      transform: translate(-0%, -50%);
+      transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
       text-align: center;
+      width: 25rem;
 
       @include mobile {
-        left: 2.5rem;
+        left: 50%;
+        bottom: 5%;
       }
+
 
       p {
         font-size: 1rem;
@@ -101,7 +105,15 @@
 
     @include tablet {
       margin-top: 3rem;
-      height: 20rem;
+      height: 30rem;
+      padding-right: 0;
+      padding-inline: 1rem;
+    }
+
+    @include mobile {
+      max-width: initial;
+      height: initial;
+      margin-top: 0;
     }
 
     h2 {
