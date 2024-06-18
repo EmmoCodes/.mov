@@ -52,6 +52,16 @@ function SearchBar() {
             value={inputSearch}
             className={searchFrame ? 'close' : 'search_input'}
           />
+          {location.pathname === '/home' ? (
+            <>
+              <section className={searchFrame ? 'searched_movie_frame' : 'hide'}>
+                {movieData.map(movie => (
+                  <SearchModalItem key={movie.id} movie={movie} id={movie.id} />
+                ))}
+              </section>
+            </>
+          ) : null}
+
           <div onClick={handleInputDelete} className="close_div"></div>
         </div>
         {location.pathname === '/home' ? <div className="invis_div"></div> : null}
@@ -90,15 +100,15 @@ function SearchBar() {
           </NavLink>
         </div>
       ) : null}
-      {location.pathname === '/home' ? (
-        <>
-          <section className={searchFrame ? 'searched_movie_frame' : 'hide'}>
-            {movieData.map(movie => (
-              <SearchModalItem key={movie.id} movie={movie} id={movie.id} />
-            ))}
-          </section>
-        </>
-      ) : null}
+      {/* {location.pathname === '/home' ? ( */}
+      {/*   <> */}
+      {/*     <section className={searchFrame ? 'searched_movie_frame' : 'hide'}> */}
+      {/*       {movieData.map(movie => ( */}
+      {/*         <SearchModalItem key={movie.id} movie={movie} id={movie.id} /> */}
+      {/*       ))} */}
+      {/*     </section> */}
+      {/*   </> */}
+      {/* ) : null} */}
     </section>
   )
 }
