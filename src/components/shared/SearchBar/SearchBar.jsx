@@ -33,6 +33,11 @@ function SearchBar() {
     }
   }, [inputSearch])
 
+  const handleInputDelete = () => {
+    setSearchFrame(false)
+    setInputSearch('')
+  }
+
   return (
     <section className="searchbar_wrapper">
       <div className="search_bar">
@@ -47,7 +52,7 @@ function SearchBar() {
             value={inputSearch}
             className={searchFrame ? 'close' : 'search_input'}
           />
-          <div onClick={() => setSearchFrame(false)} className="close_div"></div>
+          <div onClick={handleInputDelete} className="close_div"></div>
         </div>
         {location.pathname === '/home' ? <div className="invis_div"></div> : null}
       </div>
